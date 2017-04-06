@@ -12,6 +12,9 @@ using Microsoft.Owin.Cors;
 using Cicero.Common;
 using AutoMapper;
 using Cicero.WebApi.Infrastructure.Api;
+using Microsoft.Owin.Security.OAuth;
+using Cicero.WebApi.Infrastructure.Api.Providers;
+using Autofac.Integration.WebApi;
 
 [assembly: OwinStartup(typeof(Cicero.WebApi.Startup))]
 
@@ -54,6 +57,7 @@ namespace Cicero.WebApi
         public void Configuration(IAppBuilder app)
         {
             ConfigureCors(app);
+            ConfigureOAuth(app);
 
             app.UseAutofacMiddleware(Container);
             app.UseAutofacWebApi(HttpConfiguration);
@@ -86,6 +90,22 @@ namespace Cicero.WebApi
                     PolicyResolver = context => Task.FromResult(policy)
                 }
             });
+        }
+
+        public void ConfigureOAuth(IAppBuilder app)
+        {
+            var resolver = new AutofacWebApiDependencyResolver(Container);
+            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            {
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/token"),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                Provider = resolver.GetService(typeof(AuthorizationProvider)) as AuthorizationProvider
+            };
+
+            // Token Generation
+            app.UseOAuthAuthorizationServer(OAuthServerOptions);
+            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
         }
 
         #endregion

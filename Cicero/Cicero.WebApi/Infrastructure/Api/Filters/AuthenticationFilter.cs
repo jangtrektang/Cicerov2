@@ -1,4 +1,5 @@
 ﻿using Autofac.Integration.WebApi;
+using Cicero.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Cicero.WebApi.Infrastructure.Api.Filters
 {
     public class AuthenticationFilter : IAutofacAuthenticationFilter
     {
-       
+      
         public Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
         {
             return Task.FromResult<object>(null);

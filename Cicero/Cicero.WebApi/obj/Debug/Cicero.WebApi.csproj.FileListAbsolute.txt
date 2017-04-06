@@ -100,3 +100,7 @@ E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\System.Web.Http.WebHost.xml
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\obj\Debug\Cicero.WebApi.dll
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\obj\Debug\Cicero.WebApi.pdb
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\AutoMapper.dll
+E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.dll
+E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.xml
+E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.OAuth.xml

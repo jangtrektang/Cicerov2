@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cicero.Core.Models;
+using System.Data.Entity;
+using Cicero.Core.Helpers;
 
 namespace Cicero.Persistence.Repositories
 {
@@ -27,6 +29,12 @@ namespace Cicero.Persistence.Repositories
         public User FindById(int userId)
         {
             return _context.Users.SingleOrDefault(x => x.Id == userId);
+        }
+
+        public async Task<User> FindUser(string userName, string password)
+        {            
+            var user = await _context.Users.Where(x => x.UserName == userName && x.Password == MembershipHelper.HashPassword(password)).FirstOrDefaultAsync();
+            return user;
         }
 
         public void Save(params User[] users)

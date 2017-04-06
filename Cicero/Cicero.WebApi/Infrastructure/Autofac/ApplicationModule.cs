@@ -7,6 +7,11 @@ using Cicero.Persistence;
 using Cicero.WebApi.Infrastructure.Api;
 using Cicero.WebApi.Infrastructure.Api.Filters;
 using Module = Autofac.Module;
+using Cicero.WebApi.Infrastructure.Api.Providers;
+using Owin;
+using Microsoft.Owin.Security.OAuth;
+using Microsoft.Owin;
+using System;
 
 namespace Cicero.WebApi.Infrastructure.Autofac
 {
@@ -52,6 +57,9 @@ namespace Cicero.WebApi.Infrastructure.Autofac
                 .Where(x => x.Name.EndsWith("Factory"))
                 .AsImplementedInterfaces()
                 .InstancePerRequest();
+
+            // Register Authorizationprovider
+            builder.RegisterType<AuthorizationProvider>();
         }
 
         private static void RegisterCommonComponents(ContainerBuilder builder)
@@ -73,6 +81,6 @@ namespace Cicero.WebApi.Infrastructure.Autofac
         private static void RegisterDomainEventHandlers(ContainerBuilder builder)
         {
 
-        }
+        }  
     }
 }
