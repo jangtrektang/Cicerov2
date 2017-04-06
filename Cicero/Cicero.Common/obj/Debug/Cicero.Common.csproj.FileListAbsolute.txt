@@ -1,0 +1,5 @@
+E:\projects\CiceroV2\Cicero\Cicero.Common\bin\Debug\Cicero.Common.dll
+E:\projects\CiceroV2\Cicero\Cicero.Common\bin\Debug\Cicero.Common.pdb
+E:\projects\CiceroV2\Cicero\Cicero.Common\obj\Debug\Cicero.Common.csprojResolveAssemblyReference.cache
+E:\projects\CiceroV2\Cicero\Cicero.Common\obj\Debug\Cicero.Common.dll
+E:\projects\CiceroV2\Cicero\Cicero.Common\obj\Debug\Cicero.Common.pdb
