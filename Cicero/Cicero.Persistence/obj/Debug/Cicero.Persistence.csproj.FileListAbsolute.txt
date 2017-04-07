@@ -16,3 +16,4 @@ E:\projects\CiceroV2\Cicero\Cicero.Persistence\bin\Debug\EntityFramework.SqlServ
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\bin\Debug\log4net.xml
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.InitialCreation.resources
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.csproj.GenerateResource.Cache
+E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.addedRefreshTokens.resources

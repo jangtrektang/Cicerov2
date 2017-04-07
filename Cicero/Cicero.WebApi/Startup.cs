@@ -15,6 +15,7 @@ using Cicero.WebApi.Infrastructure.Api;
 using Microsoft.Owin.Security.OAuth;
 using Cicero.WebApi.Infrastructure.Api.Providers;
 using Autofac.Integration.WebApi;
+using Cicero.Core.Repositories;
 
 [assembly: OwinStartup(typeof(Cicero.WebApi.Startup))]
 
@@ -22,7 +23,7 @@ namespace Cicero.WebApi
 {
     public class Startup
     {
-        private static readonly IContainer Container = ContainerFactory.CreateContainer<ApplicationModule>();
+        public static readonly IContainer Container = ContainerFactory.CreateContainer<ApplicationModule>();
         private static readonly HttpConfiguration HttpConfiguration = WebApiHttpConfigurationFactory.Create(Container);
 
         public Startup()
@@ -94,13 +95,13 @@ namespace Cicero.WebApi
 
         public void ConfigureOAuth(IAppBuilder app)
         {
-            var resolver = new AutofacWebApiDependencyResolver(Container);
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-                Provider = resolver.GetService(typeof(AuthorizationProvider)) as AuthorizationProvider
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(30),
+                Provider = new AuthorizationProvider(),
+                RefreshTokenProvider = new RefreshTokenProvider()
             };
 
             // Token Generation

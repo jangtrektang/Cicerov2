@@ -19,7 +19,11 @@ namespace Cicero.Persistence.Repositories
             if (context == null) throw new ArgumentNullException(nameof(context));
             _context = context;
         }
-       
+
+        public UserRepository()
+        {
+            _context = new Cicerov2Context();
+        }
 
         public IQueryable<User> FindAll()
         {
@@ -32,8 +36,9 @@ namespace Cicero.Persistence.Repositories
         }
 
         public async Task<User> FindUser(string userName, string password)
-        {            
-            var user = await _context.Users.Where(x => x.UserName == userName && x.Password == MembershipHelper.HashPassword(password)).FirstOrDefaultAsync();
+        {
+            var passwordHashed = MembershipHelper.HashPassword(password);
+            var user = await _context.Users.Where(x => x.UserName == userName && x.Password == passwordHashed).FirstOrDefaultAsync();
             return user;
         }
 

@@ -1,5 +1,6 @@
 namespace Cicero.Persistence.Migrations
 {
+    using Core.Helpers;
     using Core.Models;
     using System;
     using System.Collections.Generic;
@@ -35,6 +36,28 @@ namespace Cicero.Persistence.Migrations
 
             context.Users.AddOrUpdate(user => user.UserName,
                 new User("Admin", "Bert", "Limerkens", "bert.limerkens@gmail.com", "dfdfdf"));
+
+            context.Clients.AddOrUpdate(client => client.Id,
+                new Client()
+                {
+                    Id = "angularApp",
+                    Secret = MembershipHelper.HashPassword("angularversion2"),
+                    Name = "Angular 2 front-end application",
+                    ApplicationType = ApplicationTypes.JavaScript,
+                    Active = true,
+                    RefreshTokenLifeTime = 7200,
+                    AllowedOrigin = "*"
+                },
+                new Client()
+                {
+                    Id = "consoleApp",
+                    Secret = MembershipHelper.HashPassword("consoleApp"),
+                    Name = "Console application",
+                    ApplicationType = ApplicationTypes.NativeConfidential,
+                    Active = true,
+                    RefreshTokenLifeTime = 7200,
+                    AllowedOrigin = "*"
+                });
 
             context.SaveChanges();
         }

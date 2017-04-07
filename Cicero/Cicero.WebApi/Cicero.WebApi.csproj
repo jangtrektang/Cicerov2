@@ -187,6 +187,7 @@
     <Compile Include="Infrastructure\Api\Filters\AuthenticationFilter.cs" />
     <Compile Include="Infrastructure\Api\Filters\LoggingFilter.cs" />
     <Compile Include="Infrastructure\Api\Providers\AuthorizationProvider.cs" />
+    <Compile Include="Infrastructure\Api\Providers\RefreshTokenProvider.cs" />
     <Compile Include="Infrastructure\Api\WebApiController.cs" />
     <Compile Include="Infrastructure\Api\WebApiHttpConfigurationFactory.cs" />
     <Compile Include="Infrastructure\Autofac\ApplicationModule.cs" />

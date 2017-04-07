@@ -59,7 +59,9 @@ namespace Cicero.WebApi.Infrastructure.Autofac
                 .InstancePerRequest();
 
             // Register Authorizationprovider
-            builder.RegisterType<AuthorizationProvider>();
+            builder.RegisterType<AuthorizationProvider>()
+                .AsSelf()
+                .SingleInstance();
         }
 
         private static void RegisterCommonComponents(ContainerBuilder builder)

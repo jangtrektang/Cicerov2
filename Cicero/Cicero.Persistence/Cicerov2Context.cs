@@ -22,12 +22,16 @@ namespace Cicero.Persistence
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new UserConfiguration());
             modelBuilder.Configurations.Add(new RoleConfiguration());
+            modelBuilder.Configurations.Add(new ClientConfiguration());
+            modelBuilder.Configurations.Add(new RefreshTokenConfiguration());
         }
 
         #region DbSets
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         #endregion
     }
