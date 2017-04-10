@@ -8,6 +8,21 @@ namespace Cicero.Core.Models
 {
     public class RefreshToken
     {
+        public RefreshToken()
+        {
+
+        }
+
+        public RefreshToken(string id, string subject, string clientId, DateTime issuedUtc, DateTime expiresUtc, string protectedTicket)
+        {
+            Id = id;
+            Subject = subject;
+            ClientId = clientId;
+            IssuedUtc = issuedUtc;
+            ExpiresUtc = expiresUtc;
+            ProtectedTicket = protectedTicket;
+        }
+
         public string Id { get; set; }
         public string Subject { get; set; }
         public string ClientId { get; set; }
