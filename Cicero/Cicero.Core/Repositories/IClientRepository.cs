@@ -15,6 +15,6 @@ namespace Cicero.Core.Repositories
 
         void Save(params Client[] clients);
 
-        void Delet(params Client[] clients);
+        void Delete(params Client[] clients);
     }
 }

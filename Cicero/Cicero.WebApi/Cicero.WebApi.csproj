@@ -175,6 +175,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ClientsController.cs" />
+    <Compile Include="Controllers\RefreshTokensController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Infrastructure\Api\ActionResults\ForbiddenResult.cs" />
@@ -194,12 +196,18 @@
     <Compile Include="Infrastructure\Autofac\ContainerFactory.cs" />
     <Compile Include="Infrastructure\Extensions\AutoMapperExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\HttpActionResultExtensions.cs" />
+    <Compile Include="Mappers\ClientMapper.cs" />
+    <Compile Include="Mappers\RefreshTokenMapper.cs" />
     <Compile Include="Mappers\RoleMapper.cs" />
     <Compile Include="Mappers\UserMapper.cs" />
-    <Compile Include="Models\RoleReadModel.cs" />
-    <Compile Include="Models\RoleWriteModel.cs" />
-    <Compile Include="Models\UserReadModel.cs" />
-    <Compile Include="Models\UserWriteModel.cs" />
+    <Compile Include="Models\Clients\ClientReadModel.cs" />
+    <Compile Include="Models\Clients\ClientWriteModel.cs" />
+    <Compile Include="Models\RefreshTokens\RefreshTokenReadModel.cs" />
+    <Compile Include="Models\RefreshTokens\RefreshTokenWriteModel.cs" />
+    <Compile Include="Models\Roles\RoleReadModel.cs" />
+    <Compile Include="Models\Roles\RoleWriteModel.cs" />
+    <Compile Include="Models\Users\UserReadModel.cs" />
+    <Compile Include="Models\Users\UserWriteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

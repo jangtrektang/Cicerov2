@@ -16,8 +16,8 @@ namespace Cicero.WebApi.Infrastructure.Api
         {
             CreateMap<User, UserReadModel>();
             CreateMap<Role, RoleReadModel>();
-            CreateMap(Client, ClientReadModel>());
-            CreateMap(RefreshToken, RefreshTokenReadModel>());
+            CreateMap<Client, ClientReadModel>();
+            CreateMap<RefreshToken, RefreshTokenReadModel>();
         }
     }
 }
