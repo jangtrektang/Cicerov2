@@ -7,3 +7,12 @@ E:\projects\CiceroV2\Cicero\Cicero.Core\bin\Debug\log4net.xml
 E:\projects\CiceroV2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.csprojResolveAssemblyReference.cache
 E:\projects\CiceroV2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.dll
 E:\projects\CiceroV2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.pdb
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\Cicero.Core.dll
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\Cicero.Core.pdb
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\Cicero.Common.dll
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\log4net.dll
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\Cicero.Common.pdb
+C:\personal\Cicerov2\Cicero\Cicero.Core\bin\Debug\log4net.xml
+C:\personal\Cicerov2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.csprojResolveAssemblyReference.cache
+C:\personal\Cicerov2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.dll
+C:\personal\Cicerov2\Cicero\Cicero.Core\obj\Debug\Cicero.Core.pdb

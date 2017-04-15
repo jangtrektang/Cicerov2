@@ -17,3 +17,9 @@ E:\projects\CiceroV2\Cicero\Cicero.Persistence\bin\Debug\log4net.xml
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.InitialCreation.resources
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.csproj.GenerateResource.Cache
 E:\projects\CiceroV2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.addedRefreshTokens.resources
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.csprojResolveAssemblyReference.cache
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.InitialCreation.resources
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.Migrations.addedRefreshTokens.resources
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.csproj.GenerateResource.Cache
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.dll
+C:\personal\Cicerov2\Cicero\Cicero.Persistence\obj\Debug\Cicero.Persistence.pdb

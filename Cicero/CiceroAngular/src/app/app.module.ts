@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './users/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './users/signup/signup.component';
-import { AdminheaderComponent } from './layout/adminheader/adminheader.component';
-import { AdminsidebarComponent } from './layout/adminsidebar/adminsidebar.component';
+import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
+import { AdminbreadcrumbComponent } from './layout/adminbreadcrumb/adminbreadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { AdminsidebarComponent } from './layout/adminsidebar/adminsidebar.compon
     LoginComponent,
     HomeComponent,
     SignupComponent,
-    AdminheaderComponent,
-    AdminsidebarComponent    
+    AdminlayoutComponent,
+    AdminbreadcrumbComponent    
   ],
   imports: [
     BrowserModule,

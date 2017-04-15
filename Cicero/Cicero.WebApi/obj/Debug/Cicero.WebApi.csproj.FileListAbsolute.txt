@@ -104,3 +104,6 @@ E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.dll
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.OAuth.dll
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.xml
 E:\projects\CiceroV2\Cicero\Cicero.WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\personal\Cicerov2\Cicero\Cicero.WebApi\obj\Debug\Cicero.WebApi.csprojResolveAssemblyReference.cache
+C:\personal\Cicerov2\Cicero\Cicero.WebApi\obj\Debug\Cicero.WebApi.dll
+C:\personal\Cicerov2\Cicero\Cicero.WebApi\obj\Debug\Cicero.WebApi.pdb
