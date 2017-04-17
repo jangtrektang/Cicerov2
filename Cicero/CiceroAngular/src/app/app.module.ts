@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './users/signup/signup.component';
 import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
 import { AdminbreadcrumbComponent } from './layout/adminbreadcrumb/adminbreadcrumb.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdminbreadcrumbComponent } from './layout/adminbreadcrumb/adminbreadcru
     HomeComponent,
     SignupComponent,
     AdminlayoutComponent,
-    AdminbreadcrumbComponent    
+    AdminbreadcrumbComponent,
+    DashboardComponent    
   ],
   imports: [
     BrowserModule,

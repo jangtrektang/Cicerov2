@@ -1,6 +1,6 @@
 <div class="login">
 <div class="content">
-  <form class="form-horizontal" [formGroup]="signupForm" (ngSubmit)="signUp()">
+  <form class="form-horizontal" [formGroup]="signupForm" (ngSubmit)="signUp()" *ngIf="!registered">
     <h3 class="font-green">Sign up</h3>
     <p class="hint">Enter your account details below: </p>
     <div class="form-group">
@@ -50,5 +50,9 @@
       <button type="submit" id="register-submit-btn" class="btn btn-success uppercase pull-left">Submit</button>
     </div>
   </form>
+  <div *ngIf="registered">
+    Your signup has been completed. <br/>
+    You can login <a routerLink="./../login">here</a>.
+  </div>
 </div>
 </div>

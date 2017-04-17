@@ -58,7 +58,7 @@ namespace Cicero.WebApi.Controllers
                 .WithPaginationHeader(pagedList);
         }
 
-        [Route("refreshtokens/refreshTokenId", Name = "GetRefreshToken")]
+        [Route("refreshtokens/{refreshTokenId}", Name = "GetRefreshToken")]
         [HttpGet]
         public IHttpActionResult GetRefreshToken(string refreshTokenId)
         {

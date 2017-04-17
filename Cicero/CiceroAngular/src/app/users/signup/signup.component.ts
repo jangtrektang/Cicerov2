@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import {Observable} from 'rxjs/Rx';
+import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 import { User } from './../../DTO/users/user';
 import { UserService } from './../../services/users/user.service';
@@ -14,11 +15,12 @@ import { UserService } from './../../services/users/user.service';
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   user = new User();
+  registered: boolean;
 
   private _validationMessages: { [id: string]: { [id: string]: string } };
   formError: { [id: string]: string };
  
-  constructor(private _fb: FormBuilder, userService: UserService) {
+  constructor(private _fb: FormBuilder, private _userService: UserService, private _router: Router) {
     // Initialize error messages
     this.initializeErrors();
 
@@ -28,6 +30,9 @@ export class SignupComponent implements OnInit {
     // Validate when value changes
     this.signupForm.valueChanges
       .subscribe(data => this.validateSignUpForm(true));
+
+      // Not yet registered
+      this.registered = true;
    }
 
   ngOnInit() {
@@ -37,7 +42,16 @@ export class SignupComponent implements OnInit {
     if(this.signupForm.dirty && this.signupForm.valid) {      
       this.mapUser(this.signupForm.value);
 
-      console.log(this.user);
+      this._userService.create(this.user)
+        .subscribe(
+          data => {
+                    console.log(data);
+                    this.registered = true;
+                    //this._router.navigate(['/login']);
+          },
+          error => {
+              console.log(error);
+          });
     }
     else {
       this.validateSignUpForm(false);

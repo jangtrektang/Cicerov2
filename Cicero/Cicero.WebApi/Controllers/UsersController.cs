@@ -57,11 +57,25 @@ namespace Cicero.WebApi.Controllers
                 .WithPaginationHeader(pagedList);
         }
 
-        [Route("users/userId", Name = "GetUser")]
+        [Route("users/{userId}", Name = "GetUser")]
         [HttpGet]
         public IHttpActionResult GetUser(int userId)
         {
             var user = _userRepository.FindById(userId);
+
+            if (user == null)
+                return NotFound();
+
+            var model = Mapper.Map<UserReadModel>(user);
+
+            return Ok(model);
+        }
+
+        [Route("users/{username}", Name = "GetUserByUsername")]
+        [HttpGet]
+        public IHttpActionResult GetUser(string username)
+        {
+            var user = _userRepository.FindByUsername(username);
 
             if (user == null)
                 return NotFound();

@@ -2,9 +2,11 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminlayoutComponent } from './layout/adminlayout/adminlayout.component';
+
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './users/login/login.component';
 import { SignupComponent } from './users/signup/signup.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
   {
@@ -19,7 +21,7 @@ const appRoutes: Routes = [
         children: [
             {
               path: 'dashboard', 
-              component: HomeComponent
+              component: DashboardComponent
             }
         ]
       }      

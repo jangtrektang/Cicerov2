@@ -35,6 +35,12 @@ namespace Cicero.Persistence.Repositories
             return _context.Users.SingleOrDefault(x => x.Id == userId);
         }
 
+        public User FindByUsername(string username)
+        {
+            return _context.Users.Where(x => x.UserName == username)
+                .FirstOrDefault();
+        }
+
         public async Task<User> FindUser(string userName, string password)
         {
             var passwordHashed = MembershipHelper.HashPassword(password);

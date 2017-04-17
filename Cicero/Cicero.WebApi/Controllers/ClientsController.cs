@@ -57,7 +57,7 @@ namespace Cicero.WebApi.Controllers
                 .WithPaginationHeader(pagedList);
         }
 
-        [Route("clients/clientId", Name = "GetClient")]
+        [Route("clients/{clientId}", Name = "GetClient")]
         [HttpGet]
         public IHttpActionResult GetRole(string clientId)
         {

@@ -26,6 +26,13 @@ export class UserService {
       .map((res: any) => res.json());
   }
 
+  getByUsername(username: string) {
+    console.log("here i am  " + username);
+    return this.http
+      .get(this.apiUrl + '/' + username)
+      .map((res: any) => res.json());
+  }
+
   create(user: User){
     return this.http
       .post(this.apiUrl, user)

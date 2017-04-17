@@ -1,0 +1,50 @@
+<h1 class="page-title"> Dashboard
+</h1>
+<div class="page-bar">
+ <app-adminbreadcrumb></app-adminbreadcrumb>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="portlet light ">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="icon-social-dribbble font-green"></i>
+                <span class="caption-subject font-green bold uppercase">Users</span>
+            </div>
+            <div class="actions">
+                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                    <i class="icon-cloud-upload"></i>
+                </a>
+                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                    <i class="icon-wrench"></i>
+                </a>
+                <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                    <i class="icon-trash"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body">
+            <div class="table-scrollable">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> Username </th>
+                            <th> First Name </th>
+                            <th> Last Name </th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                          <td>{{user.id}}</td>
+                          <td>{{user.userName}}</td>
+                          <td>{{user.firstName}}</td>
+                          <td>{{user.lastName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
